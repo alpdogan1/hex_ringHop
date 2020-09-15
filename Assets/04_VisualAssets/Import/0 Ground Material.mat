@@ -10,10 +10,10 @@ Material:
   m_Name: 0 Ground Material
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 6
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
+  m_CustomRenderQueue: 2000
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
@@ -71,10 +71,11 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.59122473, g: 0.8584906, b: 0.45759168, a: 1}
+    - _BaseColor: {r: 0.23642753, g: 0.32308394, b: 0.6509434, a: 1}
     - _Color: {r: 0.16572218, g: 0.3588409, b: 0.066823915, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
 --- !u!114 &6832216381813748322
 MonoBehaviour:
   m_ObjectHideFlags: 11
