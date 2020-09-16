@@ -1,0 +1,724 @@
+fileFormatVersion: 2
+guid: e407322465a7a43df9ab6d8e3f47f342
+ModelImporter:
+  serializedVersion: 20101
+  internalIDToNameTable:
+  - first:
+      74: 8440248360967096626
+    second: Camera|CameraAction
+  - first:
+      74: -300738737519976610
+    second: Camera|Cube.001Action
+  - first:
+      74: -4319510579355373012
+    second: Camera|Roundcube.006Action
+  - first:
+      74: -7480113915983610887
+    second: Camera|Roundcube.006Action.001
+  - first:
+      74: 6961707659888009263
+    second: Camera|Roundcube.007Action
+  - first:
+      74: 8099384645520481120
+    second: Camera|Roundcube.007Action.001
+  - first:
+      74: 343456230836587756
+    second: Camera|Roundcube.010Action
+  - first:
+      74: -3212204915070973512
+    second: Camera|TorusAction
+  - first:
+      74: -3706449246750405089
+    second: 01 Player|CameraAction
+  - first:
+      74: 940739222417498586
+    second: 01 Player|Cube.001Action
+  - first:
+      74: 5172371306119417383
+    second: 01 Player|Roundcube.006Action
+  - first:
+      74: 7766491172452181318
+    second: 01 Player|Roundcube.006Action.001
+  - first:
+      74: -5742863901912001588
+    second: 01 Player|Roundcube.007Action
+  - first:
+      74: -81970249778747174
+    second: 01 Player|Roundcube.007Action.001
+  - first:
+      74: -4319936265123383893
+    second: 01 Player|Roundcube.010Action
+  - first:
+      74: -1635958635763261072
+    second: 01 Player|TorusAction
+  - first:
+      74: 8668839035740816625
+    second: 02 Ring|CameraAction
+  - first:
+      74: -4417989179363330069
+    second: 02 Ring|Cube.001Action
+  - first:
+      74: -3030325405957172453
+    second: 02 Ring|Roundcube.006Action
+  - first:
+      74: 4371972897007099013
+    second: 02 Ring|Roundcube.006Action.001
+  - first:
+      74: -6874684093400763639
+    second: 02 Ring|Roundcube.007Action
+  - first:
+      74: -7375453147631107479
+    second: 02 Ring|Roundcube.007Action.001
+  - first:
+      74: -7754259708561677657
+    second: 02 Ring|Roundcube.010Action
+  - first:
+      74: 5506292260358613133
+    second: 02 Ring|TorusAction
+  - first:
+      74: 3203923130944053007
+    second: 03 Hole Unit|CameraAction
+  - first:
+      74: 3441215087681708997
+    second: 03 Hole Unit|Cube.001Action
+  - first:
+      74: -8172057136869450042
+    second: 03 Hole Unit|Roundcube.006Action
+  - first:
+      74: 2518939183180482098
+    second: 03 Hole Unit|Roundcube.006Action.001
+  - first:
+      74: 1078365528040779485
+    second: 03 Hole Unit|Roundcube.007Action
+  - first:
+      74: -4030251809047417556
+    second: 03 Hole Unit|Roundcube.007Action.001
+  - first:
+      74: -1799906983744540878
+    second: 03 Hole Unit|Roundcube.010Action
+  - first:
+      74: 4218070353328318248
+    second: 03 Hole Unit|TorusAction
+  - first:
+      74: 159259053309954683
+    second: Camera|01 Player|01 Player|CameraAction|01 Player|CameraAction
+  - first:
+      74: -2387078426144234163
+    second: Camera|01 Player|01 Player|Cube.001Action|01 Player|Cube.001Action
+  - first:
+      74: 8222150949931919988
+    second: Camera|01 Player|01 Player|Roundcube.006Action.001|01 Player|Roundcube
+  - first:
+      74: 1996882008447671043
+    second: Camera|01 Player|01 Player|Roundcube.006Action|01 Player|Roundcube.006
+  - first:
+      74: 8119758733117065342
+    second: Camera|01 Player|01 Player|Roundcube.007Action.001|01 Player|Roundcube
+  - first:
+      74: -3647561398674400266
+    second: Camera|01 Player|01 Player|Roundcube.007Action|01 Player|Roundcube.007
+  - first:
+      74: -3969439615221032007
+    second: Camera|01 Player|01 Player|Roundcube.010Action|01 Player|Roundcube.010
+  - first:
+      74: -5110926078401190336
+    second: Camera|01 Player|01 Player|TorusAction|01 Player|TorusAction
+  - first:
+      74: -4058587424577720250
+    second: Camera|02 Ring|02 Ring|CameraAction|02 Ring|CameraAction
+  - first:
+      74: -5314281447645330508
+    second: Camera|02 Ring|02 Ring|Cube.001Action|02 Ring|Cube.001Action
+  - first:
+      74: 4938084573065897074
+    second: Camera|02 Ring|02 Ring|Roundcube.006Action.001|02 Ring|Roundcube.006Ac
+  - first:
+      74: -6232123464675530384
+    second: Camera|02 Ring|02 Ring|Roundcube.006Action|02 Ring|Roundcube.006Action
+  - first:
+      74: -1225754920221160287
+    second: Camera|02 Ring|02 Ring|Roundcube.007Action.001|02 Ring|Roundcube.007Ac
+  - first:
+      74: -7131373075104697555
+    second: Camera|02 Ring|02 Ring|Roundcube.007Action|02 Ring|Roundcube.007Action
+  - first:
+      74: 7894679148022631390
+    second: Camera|02 Ring|02 Ring|Roundcube.010Action|02 Ring|Roundcube.010Action
+  - first:
+      74: -1434694047199711549
+    second: Camera|02 Ring|02 Ring|TorusAction|02 Ring|TorusAction
+  - first:
+      74: 5866658819614017164
+    second: Camera|03 Hole Unit|03 Hole Unit|CameraAction|03 Hole Unit|CameraActio
+  - first:
+      74: 4074919711220245076
+    second: Camera|03 Hole Unit|03 Hole Unit|Cube.001Action|03 Hole Unit|Cube.001A
+  - first:
+      74: 89425700788829273
+    second: Camera|03 Hole Unit|03 Hole Unit|Roundcube.006Action.001|03 Hole Unit|
+  - first:
+      74: 5376500609377369551
+    second: Camera|03 Hole Unit|03 Hole Unit|Roundcube.006Action|03 Hole Unit|Roun
+  - first:
+      74: -5464960085834086514
+    second: Camera|03 Hole Unit|03 Hole Unit|Roundcube.007Action.001|03 Hole Unit|
+  - first:
+      74: 5385002065402784891
+    second: Camera|03 Hole Unit|03 Hole Unit|Roundcube.007Action|03 Hole Unit|Roun
+  - first:
+      74: -6986448147930778239
+    second: Camera|03 Hole Unit|03 Hole Unit|Roundcube.010Action|03 Hole Unit|Roun
+  - first:
+      74: -8933622512895654482
+    second: Camera|03 Hole Unit|03 Hole Unit|TorusAction|03 Hole Unit|TorusAction
+  - first:
+      74: 4419348904836693732
+    second: Camera|Camera|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -4998301470807719863
+    second: Camera|Camera|Camera|Cube.001Action|Camera|Cube.001Action
+  - first:
+      74: 2377241875196527874
+    second: Camera|Camera|Camera|Roundcube.006Action.001|Camera|Roundcube.006Actio
+  - first:
+      74: -8399436877112522979
+    second: Camera|Camera|Camera|Roundcube.006Action|Camera|Roundcube.006Action
+  - first:
+      74: 472457780049607353
+    second: Camera|Camera|Camera|Roundcube.007Action.001|Camera|Roundcube.007Actio
+  - first:
+      74: 6346028465656157115
+    second: Camera|Camera|Camera|Roundcube.007Action|Camera|Roundcube.007Action
+  - first:
+      74: -5064821255457357264
+    second: Camera|Camera|Camera|Roundcube.010Action|Camera|Roundcube.010Action
+  - first:
+      74: 4867920992425134047
+    second: Camera|Camera|Camera|TorusAction|Camera|TorusAction
+  - first:
+      74: -3699873356297924491
+    second: 01 Player|01 Player|01 Player|CameraAction|01 Player|CameraAction
+  - first:
+      74: -2437217877516687929
+    second: 01 Player|01 Player|01 Player|Cube.001Action|01 Player|Cube.001Action
+  - first:
+      74: 397163358588781535
+    second: 01 Player|01 Player|01 Player|Roundcube.006Action.001|01 Player|Roundcube
+  - first:
+      74: -8706940432667547387
+    second: 01 Player|01 Player|01 Player|Roundcube.006Action|01 Player|Roundcube.006
+  - first:
+      74: 1018812704151364429
+    second: 01 Player|01 Player|01 Player|Roundcube.007Action.001|01 Player|Roundcube
+  - first:
+      74: 5465530660548511605
+    second: 01 Player|01 Player|01 Player|Roundcube.007Action|01 Player|Roundcube.007
+  - first:
+      74: 1590382633693294001
+    second: 01 Player|01 Player|01 Player|Roundcube.010Action|01 Player|Roundcube.010
+  - first:
+      74: -3411727484367407789
+    second: 01 Player|01 Player|01 Player|TorusAction|01 Player|TorusAction
+  - first:
+      74: 717702515748402350
+    second: 01 Player|02 Ring|02 Ring|CameraAction|02 Ring|CameraAction
+  - first:
+      74: -292729178286919950
+    second: 01 Player|02 Ring|02 Ring|Cube.001Action|02 Ring|Cube.001Action
+  - first:
+      74: -5532897194003526125
+    second: 01 Player|02 Ring|02 Ring|Roundcube.006Action.001|02 Ring|Roundcube.006Ac
+  - first:
+      74: -1593988220623810269
+    second: 01 Player|02 Ring|02 Ring|Roundcube.006Action|02 Ring|Roundcube.006Action
+  - first:
+      74: -6217372673029862123
+    second: 01 Player|02 Ring|02 Ring|Roundcube.007Action.001|02 Ring|Roundcube.007Ac
+  - first:
+      74: -2869358135450215618
+    second: 01 Player|02 Ring|02 Ring|Roundcube.007Action|02 Ring|Roundcube.007Action
+  - first:
+      74: -1930875882650476962
+    second: 01 Player|02 Ring|02 Ring|Roundcube.010Action|02 Ring|Roundcube.010Action
+  - first:
+      74: -3197651804900377474
+    second: 01 Player|02 Ring|02 Ring|TorusAction|02 Ring|TorusAction
+  - first:
+      74: -2072264669649813826
+    second: 01 Player|03 Hole Unit|03 Hole Unit|CameraAction|03 Hole Unit|CameraActio
+  - first:
+      74: -1688392796552284410
+    second: 01 Player|03 Hole Unit|03 Hole Unit|Cube.001Action|03 Hole Unit|Cube.001A
+  - first:
+      74: 6484435167524013572
+    second: 01 Player|03 Hole Unit|03 Hole Unit|Roundcube.006Action.001|03 Hole Unit|
+  - first:
+      74: 463002339827015444
+    second: 01 Player|03 Hole Unit|03 Hole Unit|Roundcube.006Action|03 Hole Unit|Roun
+  - first:
+      74: -3180872313324068339
+    second: 01 Player|03 Hole Unit|03 Hole Unit|Roundcube.007Action.001|03 Hole Unit|
+  - first:
+      74: 7196629885302046161
+    second: 01 Player|03 Hole Unit|03 Hole Unit|Roundcube.007Action|03 Hole Unit|Roun
+  - first:
+      74: -1134464701768377541
+    second: 01 Player|03 Hole Unit|03 Hole Unit|Roundcube.010Action|03 Hole Unit|Roun
+  - first:
+      74: 3372104004219958218
+    second: 01 Player|03 Hole Unit|03 Hole Unit|TorusAction|03 Hole Unit|TorusAction
+  - first:
+      74: 4306406575098469129
+    second: 01 Player|Camera|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: 6344422915158276349
+    second: 01 Player|Camera|Camera|Cube.001Action|Camera|Cube.001Action
+  - first:
+      74: 8763115230472099570
+    second: 01 Player|Camera|Camera|Roundcube.006Action.001|Camera|Roundcube.006Actio
+  - first:
+      74: -5681424043045716970
+    second: 01 Player|Camera|Camera|Roundcube.006Action|Camera|Roundcube.006Action
+  - first:
+      74: 4305459300574854408
+    second: 01 Player|Camera|Camera|Roundcube.007Action.001|Camera|Roundcube.007Actio
+  - first:
+      74: 7812495011818795538
+    second: 01 Player|Camera|Camera|Roundcube.007Action|Camera|Roundcube.007Action
+  - first:
+      74: 4108792482628015254
+    second: 01 Player|Camera|Camera|Roundcube.010Action|Camera|Roundcube.010Action
+  - first:
+      74: 1599736008104764470
+    second: 01 Player|Camera|Camera|TorusAction|Camera|TorusAction
+  - first:
+      74: -526165578900300532
+    second: 02 Ring|01 Player|01 Player|CameraAction|01 Player|CameraAction
+  - first:
+      74: 9079661593824850485
+    second: 02 Ring|01 Player|01 Player|Cube.001Action|01 Player|Cube.001Action
+  - first:
+      74: 5408188824098045684
+    second: 02 Ring|01 Player|01 Player|Roundcube.006Action.001|01 Player|Roundcube
+  - first:
+      74: -4800619654131432863
+    second: 02 Ring|01 Player|01 Player|Roundcube.006Action|01 Player|Roundcube.006
+  - first:
+      74: 8569841658477168808
+    second: 02 Ring|01 Player|01 Player|Roundcube.007Action.001|01 Player|Roundcube
+  - first:
+      74: -2671475139059149261
+    second: 02 Ring|01 Player|01 Player|Roundcube.007Action|01 Player|Roundcube.007
+  - first:
+      74: 8739797587982641012
+    second: 02 Ring|01 Player|01 Player|Roundcube.010Action|01 Player|Roundcube.010
+  - first:
+      74: -7110955001042879400
+    second: 02 Ring|01 Player|01 Player|TorusAction|01 Player|TorusAction
+  - first:
+      74: 3689306209716706374
+    second: 02 Ring|02 Ring|02 Ring|CameraAction|02 Ring|CameraAction
+  - first:
+      74: 4354315242730733928
+    second: 02 Ring|02 Ring|02 Ring|Cube.001Action|02 Ring|Cube.001Action
+  - first:
+      74: -8345086194064456091
+    second: 02 Ring|02 Ring|02 Ring|Roundcube.006Action.001|02 Ring|Roundcube.006Ac
+  - first:
+      74: -8087707511429584737
+    second: 02 Ring|02 Ring|02 Ring|Roundcube.006Action|02 Ring|Roundcube.006Action
+  - first:
+      74: -1804197353807493475
+    second: 02 Ring|02 Ring|02 Ring|Roundcube.007Action.001|02 Ring|Roundcube.007Ac
+  - first:
+      74: -8624095265786865502
+    second: 02 Ring|02 Ring|02 Ring|Roundcube.007Action|02 Ring|Roundcube.007Action
+  - first:
+      74: -1183200358500983576
+    second: 02 Ring|02 Ring|02 Ring|Roundcube.010Action|02 Ring|Roundcube.010Action
+  - first:
+      74: 7777653603185104913
+    second: 02 Ring|02 Ring|02 Ring|TorusAction|02 Ring|TorusAction
+  - first:
+      74: 1068667173870889832
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|CameraAction|03 Hole Unit|CameraActio
+  - first:
+      74: -6919789401900593448
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|Cube.001Action|03 Hole Unit|Cube.001A
+  - first:
+      74: -2368199728536700394
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|Roundcube.006Action.001|03 Hole Unit|
+  - first:
+      74: 4638890300764677605
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|Roundcube.006Action|03 Hole Unit|Roun
+  - first:
+      74: 1103355144955558933
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|Roundcube.007Action.001|03 Hole Unit|
+  - first:
+      74: 5312525750287875153
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|Roundcube.007Action|03 Hole Unit|Roun
+  - first:
+      74: -6480873671868035540
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|Roundcube.010Action|03 Hole Unit|Roun
+  - first:
+      74: -8514133643208502891
+    second: 02 Ring|03 Hole Unit|03 Hole Unit|TorusAction|03 Hole Unit|TorusAction
+  - first:
+      74: -3079879597558826567
+    second: 02 Ring|Camera|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: -5665579070834796633
+    second: 02 Ring|Camera|Camera|Cube.001Action|Camera|Cube.001Action
+  - first:
+      74: 7855353439044156222
+    second: 02 Ring|Camera|Camera|Roundcube.006Action.001|Camera|Roundcube.006Actio
+  - first:
+      74: 7817244110131297853
+    second: 02 Ring|Camera|Camera|Roundcube.006Action|Camera|Roundcube.006Action
+  - first:
+      74: 8643934331778788183
+    second: 02 Ring|Camera|Camera|Roundcube.007Action.001|Camera|Roundcube.007Actio
+  - first:
+      74: -2394776780811588352
+    second: 02 Ring|Camera|Camera|Roundcube.007Action|Camera|Roundcube.007Action
+  - first:
+      74: -7435281043087949886
+    second: 02 Ring|Camera|Camera|Roundcube.010Action|Camera|Roundcube.010Action
+  - first:
+      74: -1064179583180801576
+    second: 02 Ring|Camera|Camera|TorusAction|Camera|TorusAction
+  - first:
+      74: -1318105702099113029
+    second: 03 Hole Unit|01 Player|01 Player|CameraAction|01 Player|CameraAction
+  - first:
+      74: -8456861976430695990
+    second: 03 Hole Unit|01 Player|01 Player|Cube.001Action|01 Player|Cube.001Action
+  - first:
+      74: -6951627946449047079
+    second: 03 Hole Unit|01 Player|01 Player|Roundcube.006Action.001|01 Player|Roundcube
+  - first:
+      74: 1879238502321044502
+    second: 03 Hole Unit|01 Player|01 Player|Roundcube.006Action|01 Player|Roundcube.006
+  - first:
+      74: -1759283338354315448
+    second: 03 Hole Unit|01 Player|01 Player|Roundcube.007Action.001|01 Player|Roundcube
+  - first:
+      74: -2354897872352295346
+    second: 03 Hole Unit|01 Player|01 Player|Roundcube.007Action|01 Player|Roundcube.007
+  - first:
+      74: -4185947797083377983
+    second: 03 Hole Unit|01 Player|01 Player|Roundcube.010Action|01 Player|Roundcube.010
+  - first:
+      74: 8038587696658364014
+    second: 03 Hole Unit|01 Player|01 Player|TorusAction|01 Player|TorusAction
+  - first:
+      74: -755448885134662467
+    second: 03 Hole Unit|02 Ring|02 Ring|CameraAction|02 Ring|CameraAction
+  - first:
+      74: -3433455322589164795
+    second: 03 Hole Unit|02 Ring|02 Ring|Cube.001Action|02 Ring|Cube.001Action
+  - first:
+      74: 181063237160518495
+    second: 03 Hole Unit|02 Ring|02 Ring|Roundcube.006Action.001|02 Ring|Roundcube.006Ac
+  - first:
+      74: 6077095698240301130
+    second: 03 Hole Unit|02 Ring|02 Ring|Roundcube.006Action|02 Ring|Roundcube.006Action
+  - first:
+      74: 6955600925224158534
+    second: 03 Hole Unit|02 Ring|02 Ring|Roundcube.007Action.001|02 Ring|Roundcube.007Ac
+  - first:
+      74: -964876999866135912
+    second: 03 Hole Unit|02 Ring|02 Ring|Roundcube.007Action|02 Ring|Roundcube.007Action
+  - first:
+      74: 8109486791322536701
+    second: 03 Hole Unit|02 Ring|02 Ring|Roundcube.010Action|02 Ring|Roundcube.010Action
+  - first:
+      74: 7975656165597593703
+    second: 03 Hole Unit|02 Ring|02 Ring|TorusAction|02 Ring|TorusAction
+  - first:
+      74: -8286125664204400062
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|CameraAction|03 Hole Unit|CameraActio
+  - first:
+      74: 4869237302746194263
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|Cube.001Action|03 Hole Unit|Cube.001A
+  - first:
+      74: -4903000052921156531
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|Roundcube.006Action.001|03 Hole
+      Unit|
+  - first:
+      74: -5334192802945403287
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|Roundcube.006Action|03 Hole Unit|Roun
+  - first:
+      74: 6153034286702141531
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|Roundcube.007Action.001|03 Hole
+      Unit|
+  - first:
+      74: 4274721538988493758
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|Roundcube.007Action|03 Hole Unit|Roun
+  - first:
+      74: 7805191595460844387
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|Roundcube.010Action|03 Hole Unit|Roun
+  - first:
+      74: -1554485527627374251
+    second: 03 Hole Unit|03 Hole Unit|03 Hole Unit|TorusAction|03 Hole Unit|TorusAction
+  - first:
+      74: -6138605474905955497
+    second: 03 Hole Unit|Camera|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: 1335406976838099812
+    second: 03 Hole Unit|Camera|Camera|Cube.001Action|Camera|Cube.001Action
+  - first:
+      74: -4647786113061311753
+    second: 03 Hole Unit|Camera|Camera|Roundcube.006Action.001|Camera|Roundcube.006Actio
+  - first:
+      74: 7651634079992846763
+    second: 03 Hole Unit|Camera|Camera|Roundcube.006Action|Camera|Roundcube.006Action
+  - first:
+      74: 1718626172925482716
+    second: 03 Hole Unit|Camera|Camera|Roundcube.007Action.001|Camera|Roundcube.007Actio
+  - first:
+      74: -3018401343032957005
+    second: 03 Hole Unit|Camera|Camera|Roundcube.007Action|Camera|Roundcube.007Action
+  - first:
+      74: -4039012909727032071
+    second: 03 Hole Unit|Camera|Camera|Roundcube.010Action|Camera|Roundcube.010Action
+  - first:
+      74: -9180136521375126062
+    second: 03 Hole Unit|Camera|Camera|TorusAction|Camera|TorusAction
+  - first:
+      74: -1951087935388786066
+    second: 03 Hole Unit.002|01 Player|01 Player|CameraAction|01 Player|CameraAction
+  - first:
+      74: -7055825193641704148
+    second: 03 Hole Unit.002|01 Player|01 Player|Cube.001Action|01 Player|Cube.001Action
+  - first:
+      74: -336688076829609952
+    second: 03 Hole Unit.002|01 Player|01 Player|Roundcube.006Action.001|01 Player|Roundcube
+  - first:
+      74: -687672808613828482
+    second: 03 Hole Unit.002|01 Player|01 Player|Roundcube.006Action|01 Player|Roundcube.006
+  - first:
+      74: 4052812340110774722
+    second: 03 Hole Unit.002|01 Player|01 Player|Roundcube.007Action.001|01 Player|Roundcube
+  - first:
+      74: 5972902173288031351
+    second: 03 Hole Unit.002|01 Player|01 Player|Roundcube.007Action|01 Player|Roundcube.007
+  - first:
+      74: -2201903700064195476
+    second: 03 Hole Unit.002|01 Player|01 Player|Roundcube.010Action|01 Player|Roundcube.010
+  - first:
+      74: 3072849555294392123
+    second: 03 Hole Unit.002|01 Player|01 Player|TorusAction|01 Player|TorusAction
+  - first:
+      74: -8286915329520196569
+    second: 03 Hole Unit.002|02 Ring|02 Ring|CameraAction|02 Ring|CameraAction
+  - first:
+      74: -7528222232286938973
+    second: 03 Hole Unit.002|02 Ring|02 Ring|Cube.001Action|02 Ring|Cube.001Action
+  - first:
+      74: -1892672260395945799
+    second: 03 Hole Unit.002|02 Ring|02 Ring|Roundcube.006Action.001|02 Ring|Roundcube.006Ac
+  - first:
+      74: -2401223450941558537
+    second: 03 Hole Unit.002|02 Ring|02 Ring|Roundcube.006Action|02 Ring|Roundcube.006Action
+  - first:
+      74: -5318821660327072349
+    second: 03 Hole Unit.002|02 Ring|02 Ring|Roundcube.007Action.001|02 Ring|Roundcube.007Ac
+  - first:
+      74: 4950694269389541570
+    second: 03 Hole Unit.002|02 Ring|02 Ring|Roundcube.007Action|02 Ring|Roundcube.007Action
+  - first:
+      74: 7632575978969617680
+    second: 03 Hole Unit.002|02 Ring|02 Ring|Roundcube.010Action|02 Ring|Roundcube.010Action
+  - first:
+      74: -1870316119769957989
+    second: 03 Hole Unit.002|02 Ring|02 Ring|TorusAction|02 Ring|TorusAction
+  - first:
+      74: 4522372692395964253
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|CameraAction|03 Hole Unit|CameraActio
+  - first:
+      74: 6481810104685243143
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|Cube.001Action|03 Hole Unit|Cube.001A
+  - first:
+      74: 4497671102431102640
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|Roundcube.006Action.001|03
+      Hole Unit|
+  - first:
+      74: 3722686824190232213
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|Roundcube.006Action|03 Hole
+      Unit|Roun
+  - first:
+      74: 1397749922379308782
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|Roundcube.007Action.001|03
+      Hole Unit|
+  - first:
+      74: 4723252576988064283
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|Roundcube.007Action|03 Hole
+      Unit|Roun
+  - first:
+      74: 3889535186857569569
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|Roundcube.010Action|03 Hole
+      Unit|Roun
+  - first:
+      74: -293126563599959478
+    second: 03 Hole Unit.002|03 Hole Unit|03 Hole Unit|TorusAction|03 Hole Unit|TorusAction
+  - first:
+      74: 733485620051944556
+    second: 03 Hole Unit.002|Camera|Camera|CameraAction|Camera|CameraAction
+  - first:
+      74: 334841154801913314
+    second: 03 Hole Unit.002|Camera|Camera|Cube.001Action|Camera|Cube.001Action
+  - first:
+      74: 8186258122133380314
+    second: 03 Hole Unit.002|Camera|Camera|Roundcube.006Action.001|Camera|Roundcube.006Actio
+  - first:
+      74: 8662623949777258897
+    second: 03 Hole Unit.002|Camera|Camera|Roundcube.006Action|Camera|Roundcube.006Action
+  - first:
+      74: 8988660033342019193
+    second: 03 Hole Unit.002|Camera|Camera|Roundcube.007Action.001|Camera|Roundcube.007Actio
+  - first:
+      74: -3438679669258783508
+    second: 03 Hole Unit.002|Camera|Camera|Roundcube.007Action|Camera|Roundcube.007Action
+  - first:
+      74: -7297138970067849681
+    second: 03 Hole Unit.002|Camera|Camera|Roundcube.010Action|Camera|Roundcube.010Action
+  - first:
+      74: -646228348691669082
+    second: 03 Hole Unit.002|Camera|Camera|TorusAction|Camera|TorusAction
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hole Dark.001
+    second: {fileID: 2100000, guid: 2a7d1cdae5e884c90bed9473f72fc935, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hole Dark.002
+    second: {fileID: 2100000, guid: ece4d97c0106e4fd38e35d9df01327a4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hole Dark.003
+    second: {fileID: 2100000, guid: 0940d2fe3216e4073920dca534002385, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hole Dark.004
+    second: {fileID: 2100000, guid: 0da6cf799ab7e418499e0e8b15cdc29e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hole Dark.005
+    second: {fileID: 2100000, guid: f60414c10301d428399328e0a31497ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hole Dark.010
+    second: {fileID: 2100000, guid: bd567d95146134e2ca0a860774b6a5af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: a619f9cbe6f5b459cbac60115fef4c8e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: f62960a32c554437a894c90b9c38040d, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
