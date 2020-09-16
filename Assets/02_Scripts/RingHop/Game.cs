@@ -37,7 +37,6 @@ public class Game : MonoBehaviour
 
     private static bool IsDown => Input.GetMouseButtonDown(0);
 
-
     private void Update()
     {
         if (_isPlaying && IsDown)
@@ -60,11 +59,11 @@ public class Game : MonoBehaviour
     public void StopGame()
     {
         if(!_isPlaying) return;
+        DeactivateRig(ActiveRig);
         _currentRigIndex = 0;
         MoveCam();
         _isPlaying = false;
         _UiPanel.SetIsActive(true);
-        DeactivateRig(ActiveRig);
     }
     
     private void DeactivateRig(HopRig rig)
@@ -98,6 +97,13 @@ public class Game : MonoBehaviour
         if(!_isPlaying) return;
         DeactivateRig(ActiveRig);
         _currentRigIndex++;
+
+        if (_currentRigIndex > _Rigs.Length - 1)
+        {
+            StopGame();
+            return;
+        }
+        
         LeanTween.delayedCall(_RigIterationDelay, () =>
         {
             ActivateRig(ActiveRig);

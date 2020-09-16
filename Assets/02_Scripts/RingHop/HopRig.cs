@@ -23,11 +23,13 @@ public class HopRig : MonoBehaviour
     [SerializeField, Required] private LeanTweenType _RandomFloatEase = LeanTweenType.linear;
     [SerializeField, Required] private float _RandomFloatDuration = 1;
     [SerializeField, Required] private float _DrawDelay = .05f;
+    [SerializeField] private float _RingFreezeDuration = .2f;
 
     [ShowInInspector, ReadOnly] private int _phase;
     private Vector3 _cubeStartPos;
     private Vector3 _ringStartPos;
     private List<GameObject> _trajectories = new List<GameObject>();
+    private bool _pauseTween;
 
     private void Awake()
     {
@@ -36,8 +38,15 @@ public class HopRig : MonoBehaviour
         
         _SuccessCollider.DidTouch += () =>
         {
+            LeanTween.pause(_Ring);
+            // _pauseTween = true;
+            LeanTween.delayedCall(_RingFreezeDuration, () =>
+            {
+                LeanTween.resume(_Ring);
+                // _pauseTween = false;
+            });
+            
             Finished?.Invoke(true);
-
         };
         _FailCollider.DidTouch += () =>
         {
@@ -65,6 +74,7 @@ public class HopRig : MonoBehaviour
             LeanTween.cancel(_Ring);
             LeanTween.value(_Ring, val =>
             {
+                if(_pauseTween) return;
                 var heightRange = _RingHeight - _ringStartPos.y;
                 var height = _ringStartPos.y + (heightRange * val);
                 _Ring.transform.position = new Vector3(_Ring.transform.position.x, height, _Ring.transform.position.z);
