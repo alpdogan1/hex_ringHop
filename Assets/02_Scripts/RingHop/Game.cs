@@ -10,9 +10,9 @@ public class Game : MonoBehaviour
     #region Development
 #if UNITY_EDITOR
     [Button]
-    private void GetCamOffset(Transform rig, Transform cam)
+    private void GetCamOffset(Transform rig)
     {
-        _RigOffset = cam.position - rig.position;
+        _RigOffset = _Camera.transform.position - rig.position;
     }
 #endif
     #endregion
