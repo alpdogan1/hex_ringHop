@@ -25,6 +25,8 @@ public class HopRig : MonoBehaviour
     [SerializeField, Required] private float _DrawDelay = .05f;
     [SerializeField] private float _RingFreezeDuration = .2f;
 
+    [SerializeField, Required] private ParticleSystem _CubeParticle, _RingParticle, _SuccessParticle;
+
     [ShowInInspector, ReadOnly] private int _phase;
     private Vector3 _cubeStartPos;
     private Vector3 _ringStartPos;
@@ -47,6 +49,9 @@ public class HopRig : MonoBehaviour
             });
             
             Finished?.Invoke(true);
+
+            if (_SuccessParticle)
+                _SuccessParticle.Play();
         };
         _FailCollider.DidTouch += () =>
         {
@@ -54,12 +59,16 @@ public class HopRig : MonoBehaviour
             var pos = UnityEngine.Random.onUnitSphere * _RandomFloatRange;
             LeanTween.move(_Cube, pos, _RandomFloatDuration).setEase(_RandomFloatEase);
         };
+        
+        _CubeParticle.Stop();
+        _RingParticle.Stop();
+        
+        CreateTrajectory();
+        SetIsActive(false);
     }
 
     private void Start()
     {
-        CreateTrajectory();
-        SetIsActive(false);
     }
 
     /*public void OnPointerDown(PointerEventData eventData)
@@ -92,6 +101,19 @@ public class HopRig : MonoBehaviour
         }
 
         _phase = _phase == 0 ? 1 : 0;
+
+        // Particles
+        if (_phase == 0)
+        {
+            _CubeParticle.Stop();
+            _RingParticle.Play();
+        }
+        else
+        {
+            
+            _CubeParticle.Play();
+            _RingParticle.Stop();
+        }
     }
 
     private Vector3 GetCubePos(float val)
@@ -134,5 +156,13 @@ public class HopRig : MonoBehaviour
         _SuccessCollider.gameObject.SetActive(isActive);
         _FailCollider.gameObject.SetActive(isActive);
         StartCoroutine(SetTrajectoryActive(isActive));
+
+        // Particles
+        if (isActive)
+            _RingParticle.Play();
+        else
+            _RingParticle.Stop();
+        
+        _CubeParticle.Stop();
     }
 }

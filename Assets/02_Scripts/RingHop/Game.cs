@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using Cureviz.View.Common.TweenAlphaSetActive;
+using Hex.Modules;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -20,6 +22,7 @@ public class Game : MonoBehaviour
     [SerializeField] private Vector3 _RigOffset;
     [SerializeField] private float _CameraMoveDuration = .3f;
     [SerializeField] private float _RigIterationDelay = .3f;
+    [SerializeField, Required] private SceneLevelManager _LevelManager;
 
     [ReadOnly, ShowInInspector] private int _currentRigIndex = -1;
     [ReadOnly, ShowInInspector] private bool _isPlaying;
@@ -46,14 +49,22 @@ public class Game : MonoBehaviour
     [Button]
     public void StartGame()
     {
-        DeactivateRig(ActiveRig);
-        _currentRigIndex = 0;
-        ActivateRig(ActiveRig);
+        _LevelManager.LoadCurrentLevelScene(() =>
+        {
+            // _Rigs = FindObjectsOfType<HopRig>();
+            var sortedRigs = FindObjectsOfType<HopRig>().ToList();
+            sortedRigs.Sort((rig1, rig2)=> rig1.transform.position.x - rig2.transform.position.x < 0 ? -1 : 1);
+            _Rigs = sortedRigs.ToArray();
+            
+            DeactivateRig(ActiveRig);
+            _currentRigIndex = 0;
+            ActivateRig(ActiveRig);
         
-        _isPlaying = true;
-        MoveCam();
+            _isPlaying = true;
+            MoveCam();
         
-        _UiPanel.SetIsActive(false);
+            _UiPanel.SetIsActive(false);
+        });
     }
 
     public void StopGame()
@@ -101,6 +112,7 @@ public class Game : MonoBehaviour
         if (_currentRigIndex > _Rigs.Length - 1)
         {
             StopGame();
+            _LevelManager.IterateLevel();
             return;
         }
         
