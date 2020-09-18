@@ -1,5 +1,4 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using Cureviz.View.Common.TweenAlphaSetActive;
 using Hex.Modules;
 using Sirenix.OdinInspector;
@@ -26,8 +25,12 @@ public class Game : MonoBehaviour
 
     [ReadOnly, ShowInInspector] private int _currentRigIndex = -1;
     [ReadOnly, ShowInInspector] private bool _isPlaying;
-    
+
+    [Title("UI Management")]
     [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _UiPanel;
+    [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _WinPanel;
+    [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _LosePanel;
+    [SerializeField, Required] private GameObject _Logo;
 
     private HopRig ActiveRig
     {
@@ -49,6 +52,9 @@ public class Game : MonoBehaviour
     [Button]
     public void StartGame()
     {
+        _WinPanel.SetIsActive(false);
+        _LosePanel.SetIsActive(false);
+        _Logo.SetActive(false);
         _LevelManager.LoadCurrentLevelScene(() =>
         {
             // _Rigs = FindObjectsOfType<HopRig>();
@@ -67,13 +73,17 @@ public class Game : MonoBehaviour
         });
     }
 
-    public void StopGame()
+    public void StopGame(bool isSuccess)
     {
         if(!_isPlaying) return;
+        _LosePanel.SetIsActive(!isSuccess);
+        _WinPanel.SetIsActive(isSuccess);
+
         DeactivateRig(ActiveRig);
         _currentRigIndex = 0;
         MoveCam();
         _isPlaying = false;
+        _Logo.SetActive(true);
         _UiPanel.SetIsActive(true);
     }
     
@@ -99,7 +109,7 @@ public class Game : MonoBehaviour
         }
         else
         {
-            StopGame();
+            StopGame(false);
         }
     }
 
@@ -111,7 +121,7 @@ public class Game : MonoBehaviour
 
         if (_currentRigIndex > _Rigs.Length - 1)
         {
-            StopGame();
+            StopGame(true);
             _LevelManager.IterateLevel();
             return;
         }
