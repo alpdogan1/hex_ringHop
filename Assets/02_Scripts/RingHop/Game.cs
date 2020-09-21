@@ -2,6 +2,7 @@
 using Cureviz.View.Common.TweenAlphaSetActive;
 using Hex.Modules;
 using Sirenix.OdinInspector;
+using TMPro;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -31,6 +32,7 @@ public class Game : MonoBehaviour
     [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _WinPanel;
     [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _LosePanel;
     [SerializeField, Required] private GameObject _Logo;
+    [SerializeField, Required] private TextMeshProUGUI _RigLeftText;
 
     private HopRig ActiveRig
     {
@@ -63,7 +65,10 @@ public class Game : MonoBehaviour
             _Rigs = sortedRigs.ToArray();
             
             DeactivateRig(ActiveRig);
+            
             _currentRigIndex = 0;
+            UpdateRigLeftText();
+
             ActivateRig(ActiveRig);
         
             _isPlaying = true;
@@ -118,6 +123,7 @@ public class Game : MonoBehaviour
         if(!_isPlaying) return;
         DeactivateRig(ActiveRig);
         _currentRigIndex++;
+        UpdateRigLeftText();
 
         if (_currentRigIndex > _Rigs.Length - 1)
         {
@@ -146,5 +152,11 @@ public class Game : MonoBehaviour
             Debug.Log("Finished All Rigs");
         }
         ActiveRig.Trigger();
+    }
+
+    private void UpdateRigLeftText()
+    {
+        if (!_isPlaying) _RigLeftText.text = "";
+        _RigLeftText.text = (_Rigs.Length - _currentRigIndex).ToString();
     }
 }

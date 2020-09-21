@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RingHop;
 using Sirenix.OdinInspector;
+using TetrisRun;
 using UnityEngine;
 using Random = System.Random;
 
@@ -10,6 +11,7 @@ public class HopRig : MonoBehaviour
 {
     public Action<bool> Finished;
     
+    [SerializeField, Required] private Exploder _Exploder;
     [SerializeField, Required] private ColliderWithEvent _SuccessCollider, _FailCollider;
     [SerializeField, Required] private GameObject _Cube, _Ring;
     [SerializeField, Required] private Transform _CubeDestinationPointRef;
@@ -24,14 +26,21 @@ public class HopRig : MonoBehaviour
     [SerializeField, Required] private float _RandomFloatDuration = 1;
     [SerializeField, Required] private float _DrawDelay = .05f;
     [SerializeField] private float _RingFreezeDuration = .2f;
-
-    [SerializeField, Required] private ParticleSystem _CubeParticle, _RingParticle, _SuccessParticle;
-
+    [Space]
+    [SerializeField, Required] private ParticleSystem _CubeParticle, _RingParticle, _SuccessParticle,  _CubeActiveParticle, _RingActiveParticle;
+    [SerializeField, Required]private float _CubeParticleDuration;
+    [Space]
+    [SerializeField] private bool _IsTutorial;
+    [SerializeField, ShowIf("_IsTutorial")] private float _TutorialDelay = .4f;
+    [Space]
     [ShowInInspector, ReadOnly] private int _phase;
+    
     private Vector3 _cubeStartPos;
     private Vector3 _ringStartPos;
     private List<GameObject> _trajectories = new List<GameObject>();
     private bool _pauseTween;
+    private int? _currentTutorialTweenId;
+    private bool _isTutorialWait;
 
     private void Awake()
     {
@@ -57,7 +66,9 @@ public class HopRig : MonoBehaviour
         {
             Finished?.Invoke(false);
             var pos = UnityEngine.Random.onUnitSphere * _RandomFloatRange;
-            LeanTween.move(_Cube, pos, _RandomFloatDuration).setEase(_RandomFloatEase);
+            LeanTween.cancel(_Cube);
+            // LeanTween.move(_Cube, pos, _RandomFloatDuration).setEase(_RandomFloatEase);
+            _Exploder.ExplodeNow();
         };
         
         _CubeParticle.Stop();
@@ -67,10 +78,6 @@ public class HopRig : MonoBehaviour
         SetIsActive(false);
     }
 
-    private void Start()
-    {
-    }
-
     /*public void OnPointerDown(PointerEventData eventData)
     {
         Activate();
@@ -78,19 +85,51 @@ public class HopRig : MonoBehaviour
 
     public void Trigger()
     {
+        if(_IsTutorial && _isTutorialWait) return;
+        
         if (_phase == 0)
         {
+            _RingActiveParticle.Play();
             LeanTween.cancel(_Ring);
-            LeanTween.value(_Ring, val =>
+            var cubeTweenId = LeanTween.value(_Ring, val =>
             {
                 if(_pauseTween) return;
                 var heightRange = _RingHeight - _ringStartPos.y;
                 var height = _ringStartPos.y + (heightRange * val);
                 _Ring.transform.position = new Vector3(_Ring.transform.position.x, height, _Ring.transform.position.z);
-            }, 0, 1, _RingJumpDuration).setEase(_RingJumpCurve).setOnComplete(() => _phase = 0);
+            }, 0, 1, _RingJumpDuration).setEase(_RingJumpCurve)
+                .setOnComplete(() =>
+                {
+                    _phase = 0;
+                    _RingActiveParticle.Stop();
+                    UpdateParticles();
+                }).id;
+
+
+            if (_IsTutorial)
+            {
+                _isTutorialWait = true;
+                
+                LeanTween.delayedCall(gameObject, _TutorialDelay, () =>
+                {
+                    _isTutorialWait = false;
+                    LeanTween.pause(cubeTweenId);
+                    _currentTutorialTweenId = cubeTweenId;
+                    HopTutorialPanel.SetPhaseVisible(1);
+                });
+            }
+            
         }
         else
         {
+            if(_currentTutorialTweenId.HasValue)
+            {
+                LeanTween.resume(_currentTutorialTweenId.Value);
+                _currentTutorialTweenId = null;
+            }
+            
+            _CubeActiveParticle.Play();
+            LeanTween.delayedCall(gameObject, _CubeParticleDuration, () => _CubeActiveParticle.Stop());
             LeanTween.cancel(_Cube);
             LeanTween.value(_Cube, val =>
             {
@@ -103,6 +142,11 @@ public class HopRig : MonoBehaviour
         _phase = _phase == 0 ? 1 : 0;
 
         // Particles
+        UpdateParticles();
+    }
+
+    private void UpdateParticles()
+    {
         if (_phase == 0)
         {
             _CubeParticle.Stop();
@@ -110,7 +154,6 @@ public class HopRig : MonoBehaviour
         }
         else
         {
-            
             _CubeParticle.Play();
             _RingParticle.Stop();
         }
@@ -156,6 +199,16 @@ public class HopRig : MonoBehaviour
         _SuccessCollider.gameObject.SetActive(isActive);
         _FailCollider.gameObject.SetActive(isActive);
         StartCoroutine(SetTrajectoryActive(isActive));
+
+        if(isActive && _IsTutorial)
+        {
+            HopTutorialPanel.SetPhaseVisible(0);
+        }
+
+        if (!isActive && _IsTutorial)
+        {
+            HopTutorialPanel.SetAllInvisible();
+        }
 
         // Particles
         if (isActive)

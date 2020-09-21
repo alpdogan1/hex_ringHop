@@ -10,7 +10,7 @@ namespace Hex.Modules
 {
     public class SceneLevelManager: MonoBehaviour
     {
-        private const string LevelKey = "com.hex.lonelypuzzle.levelindex03";
+        private const string LevelKey = "com.hex.ringhop.levelindex01";
         
         #region Development
 #if UNITY_EDITOR
@@ -51,6 +51,8 @@ namespace Hex.Modules
             get
             {
                 if (_LoopIndex < -1) return Mathf.Clamp(CurrentLevelIndex, 0, _LevelSceneNames.Length - 1);
+
+                if (_LevelSceneNames.Length == 0) return 0;
                 
                 return _LoopIndex +
                        ((CurrentLevelIndex - _LoopIndex) % (_LevelSceneNames.Length - _LoopIndex));
