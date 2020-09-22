@@ -5021,8 +5021,8 @@ MonoBehaviour:
   _Cube: {fileID: 6538102203245189488}
   _Ring: {fileID: 4840210257438097513}
   _CubeDestinationPointRef: {fileID: 1822571908645077812}
-  _RingHeight: 6
-  _CubeHeight: 5
+  _RingHeight: 7
+  _CubeHeight: 6
   _CubeJumpDuration: 0.6
   _RingJumpDuration: 2.8
   _CubeJumpCurve:

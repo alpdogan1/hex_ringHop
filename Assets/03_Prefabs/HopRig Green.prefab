@@ -293,7 +293,7 @@ MonoBehaviour:
   _RingHeight: 5
   _CubeHeight: 4
   _CubeJumpDuration: 0.6
-  _RingJumpDuration: 3
+  _RingJumpDuration: 3.5
   _CubeJumpCurve:
     serializedVersion: 2
     m_Curve:
