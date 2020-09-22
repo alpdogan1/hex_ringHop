@@ -193,7 +193,7 @@ PrefabInstance:
     - target: {fileID: 1822571908602059812, guid: de55fdee01fb445a9a33ff7fbb8369e4,
         type: 3}
       propertyPath: _TutorialDelay
-      value: 1
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 1822571908602059813, guid: de55fdee01fb445a9a33ff7fbb8369e4,
         type: 3}
@@ -272,7 +272,7 @@ PrefabInstance:
     - target: {fileID: 1822571908602059812, guid: de55fdee01fb445a9a33ff7fbb8369e4,
         type: 3}
       propertyPath: _TutorialDelay
-      value: 1
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 1822571908602059813, guid: de55fdee01fb445a9a33ff7fbb8369e4,
         type: 3}
@@ -481,7 +481,7 @@ PrefabInstance:
     - target: {fileID: 1822571908602059812, guid: de55fdee01fb445a9a33ff7fbb8369e4,
         type: 3}
       propertyPath: _TutorialDelay
-      value: 1
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 1822571908602059813, guid: de55fdee01fb445a9a33ff7fbb8369e4,
         type: 3}
