@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.github.asus4.unity-taptic-plugin": {
+      "version": "https://github.com/asus4/unity-taptic-plugin.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "80707264132f7e15342d95ff03fde29580fef74a"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.0",
       "depth": 1,

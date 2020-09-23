@@ -33,6 +33,9 @@ public class Game : MonoBehaviour
     [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _LosePanel;
     [SerializeField, Required] private GameObject _Logo;
     [SerializeField, Required] private TextMeshProUGUI _RigLeftText;
+    [SerializeField, Required] private TextMeshProUGUI _LevelText;
+    [SerializeField, Required] private CanvasGroupTweenAlphaSetActiveHandler _LevelTextPanel;
+    [SerializeField, Required] private float _LevelTextDuration = 1.5f;
 
     private HopRig ActiveRig
     {
@@ -75,8 +78,12 @@ public class Game : MonoBehaviour
             MoveCam();
         
             _UiPanel.SetIsActive(false);
+            _LevelText.text = $"LVL{_LevelManager.CurrentLevelIndex + 1}";
+            _LevelTextPanel.SetIsActive(true);
+            LeanTween.delayedCall(gameObject, _LevelTextDuration, () => _LevelTextPanel.SetIsActive(false));
         });
     }
+
 
     public void StopGame(bool isSuccess)
     {
@@ -86,10 +93,11 @@ public class Game : MonoBehaviour
 
         DeactivateRig(ActiveRig);
         _currentRigIndex = 0;
-        MoveCam();
+        // MoveCam();
         _isPlaying = false;
         _Logo.SetActive(true);
         _UiPanel.SetIsActive(true);
+        
     }
     
     private void DeactivateRig(HopRig rig)

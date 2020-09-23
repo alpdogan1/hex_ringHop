@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using RingHop;
 using Sirenix.OdinInspector;
+using TapticPlugin;
 using TetrisRun;
 using UnityEngine;
 using Random = System.Random;
@@ -49,6 +50,7 @@ public class HopRig : MonoBehaviour
         
         _SuccessCollider.DidTouch += () =>
         {
+            TapticManager.Impact(ImpactFeedback.Medium);
             LeanTween.pause(_Ring);
             // _pauseTween = true;
             LeanTween.delayedCall(_RingFreezeDuration, () =>
@@ -64,6 +66,7 @@ public class HopRig : MonoBehaviour
         };
         _FailCollider.DidTouch += () =>
         {
+            TapticManager.Impact(ImpactFeedback.Heavy);
             Finished?.Invoke(false);
             var pos = UnityEngine.Random.onUnitSphere * _RandomFloatRange;
             LeanTween.cancel(_Cube);
@@ -85,7 +88,10 @@ public class HopRig : MonoBehaviour
 
     public void Trigger()
     {
+        
         if(_IsTutorial && _isTutorialWait) return;
+        
+        TapticManager.Impact(ImpactFeedback.Light);
         
         if (_phase == 0)
         {
@@ -217,5 +223,13 @@ public class HopRig : MonoBehaviour
             _RingParticle.Stop();
         
         _CubeParticle.Stop();
+    }
+
+    private void OnDestroy()
+    {
+        foreach (var trajectory in _trajectories)
+        {
+            Destroy(trajectory);
+        }
     }
 }
