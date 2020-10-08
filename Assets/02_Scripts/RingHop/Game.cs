@@ -1,5 +1,8 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using Cureviz.View.Common.TweenAlphaSetActive;
+using ElephantSDK;
+using GameAnalyticsSDK;
 using Hex.Modules;
 using Sirenix.OdinInspector;
 using TMPro;
@@ -48,6 +51,11 @@ public class Game : MonoBehaviour
 
     private static bool IsDown => Input.GetMouseButtonDown(0);
 
+    private void Awake()
+    {
+        GameAnalytics.Initialize();
+    }
+
     private void Update()
     {
         if (_isPlaying && IsDown)
@@ -82,6 +90,9 @@ public class Game : MonoBehaviour
             _LevelTextPanel.SetIsActive(true);
             LeanTween.delayedCall(gameObject, _LevelTextDuration, () => _LevelTextPanel.SetIsActive(false));
         });
+
+        Elephant.LevelStarted(_LevelManager.CurrentLevelIndex);
+        GameAnalytics.NewProgressionEvent(GAProgressionStatus.Start, _LevelManager.CurrentLevelIndex.ToString());
     }
 
 
@@ -97,6 +108,18 @@ public class Game : MonoBehaviour
         _isPlaying = false;
         _Logo.SetActive(true);
         _UiPanel.SetIsActive(true);
+
+        if (isSuccess)
+        {
+            Elephant.LevelCompleted(_LevelManager.CurrentLevelIndex);
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Complete, _LevelManager.CurrentLevelIndex.ToString());
+        }
+        else
+        {
+            
+            Elephant.LevelFailed(_LevelManager.CurrentLevelIndex);
+            GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, _LevelManager.CurrentLevelIndex.ToString());
+        }
         
     }
     
